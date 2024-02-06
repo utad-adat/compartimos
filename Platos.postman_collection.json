@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "fbff5c94-e236-4690-b326-7e10b18daa58",
+		"name": "Platos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5513200"
+	},
+	"item": [
+		{
+			"name": "All Platos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/platos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"platos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Platos Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Costillas\",\n    \"restaturant\": \"Costillero\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/platos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"platos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Platos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/platos",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"platos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plato",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Migas\",\n    \"restaturant\": \"Sergios restaturant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/platos",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"platos"
+					]
+				},
+				"description": "Añade un plato y lo categoriza a los restaturants que ya existen."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://springbootapiplatos-production.up.railway.app/api/v1",
+			"type": "string"
+		}
+	]
+}
